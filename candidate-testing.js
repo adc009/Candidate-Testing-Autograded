@@ -43,7 +43,11 @@ candidateName = input.question("What is your name?");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-//candidateAnswer = input.question(question);
+
+    //This line is for Part 1 but has been commented out for Part 2.
+    //candidateAnswer = input.question(question);
+
+
 for (let i=0; i<5;i++) {
   candidateAnswers[i] = input.question(questions[i]);
 }
