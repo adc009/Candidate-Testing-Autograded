@@ -38,14 +38,14 @@ let candidateAnswers = [
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-candidateName = input.question("What is your name?");
+candidateName = input.question("What is your name? ");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-    //This line is for Part 1 but has been commented out for Part 2.
-    //candidateAnswer = input.question(question);
+    //This code is for Part 1 but is commented out for Part 2.
+      //candidateAnswer = input.question(question);
 
 
 for (let i=0; i<5;i++) {
@@ -57,14 +57,26 @@ for (let i=0; i<5;i++) {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer == correctAnswer) {
-  console.log("Correct");
-}
-else
-{
-  console.log("Incorrect. The correct answer is " + correctAnswer);
-}
 
+  //This code is for Part 1 but is commented out for Part 2.
+    // if (candidateAnswer == correctAnswer) {
+    //   console.log(candidateName + ", your answer is correct.");
+    // }
+    // else
+    // {
+    //   console.log(candidateName + ", your answer is incorrect.");
+    //   console.log("The correct answer is " + correctAnswer);
+    // }
+
+
+  //This code is for Part 2 but is commented out for Part 1.
+  for (let i=0; i<5; i++) {
+    console.log("Question " + (i+1) + ": " + questions[i]);
+    console.log("\tYour response: " + candidateAnswers[i]);
+    console.log("\tCorrect response: " + correctAnswers[i]);
+    console.log("");
+  }
+  
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
