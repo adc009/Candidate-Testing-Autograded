@@ -1,8 +1,4 @@
 const input = require('readline-sync');
-/* TODO 1/17/24 --
-  -Change Pt 2 to use template literals
-  -Push Pt 1 and Pt 2 separately for grading  
-*/
 
 // TODO 2: modify your quiz app to ask 5 questions //
 
@@ -76,17 +72,21 @@ function gradeQuiz(candidateAnswers) {
     //   console.log("The correct answer is " + correctAnswer);
     // }
 
+  let numCorrect = 0;
 
   //This code is for Part 2 but is commented out for Part 1.
   for (let i=0; i<5; i++) {
     console.log(`Question ${i+1}: ${questions[i]}`);
     console.log(`\tYour response: ${candidateAnswers[i]}`);
     console.log(`\tCorrect response: ${correctAnswers[i]}`);
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+      numCorrect++;
+    }
     console.log("");
   }
   
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+let grade = numCorrect / questions.length * 100;  //TODO 3.2 use this variable to calculate the candidates score.
+  
 
 
   return grade;
